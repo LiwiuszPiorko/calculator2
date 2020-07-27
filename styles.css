@@ -15,8 +15,8 @@ body {
   justify-content: center;
   align-content: center;
   min-height: 100vh;
-  grid-template-columns: repeat(4, 100px);
-  grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+  grid-template-columns: repeat(4, 8em);
+  grid-template-rows: minmax(10em, auto) repeat(5, 8em);
 }
 
 .calculator-grid > button {
@@ -58,4 +58,26 @@ body {
   color: white;
   font-family: 'Orbitron', sans-serif;
   font-size: 2.5rem;
+}
+
+/* respons */
+
+@media(orientation:portrait) and (max-width:600px){
+  .calculator-grid {
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 3em);
+    grid-template-rows: minmax(5em, auto) repeat(5, 3em);
+  }
+  
+  .calculator-grid > button {
+    font-size: 1rem;
+  }
+  .output .previous-operand {
+    font-size: 1rem;
+  }
+  
+  .output .current-operand {
+    font-size: 1rem;
+  }
+
 }
